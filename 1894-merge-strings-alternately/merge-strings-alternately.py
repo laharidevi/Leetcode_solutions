@@ -3,13 +3,18 @@ class Solution:
         a = ""
         m = len(word1)
         n = len(word2)
-        l = max(m,n)
+        if m != n:
+            l = min(m,n)
+        else:
+            l = m
         for i in range(l):
-            if i < m:
-                a += word1[i]
-            if i < n:
-                a += word2[i]
-        return a
+            a += word1[i] + word2[i]
+        if m > n:
+            return a + word1[n:m]
+        elif m < n:
+            return a + word2[m:n]
+        else:
+            return a
 
         
         
