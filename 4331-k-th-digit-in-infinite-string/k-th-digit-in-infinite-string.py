@@ -1,4 +1,4 @@
-class Solution:
+class Solution1:
     def kthDigit(self, k: int) -> int:
         
         mirevokanu = k
